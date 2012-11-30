@@ -14,7 +14,7 @@
 class Parser {
     std::string fileName;
     std::vector<Function> functions;
-    std::vector<std::fstream> files;
+    std::vector<std::fstream> files;    
     
     //
     //  Parsing state
