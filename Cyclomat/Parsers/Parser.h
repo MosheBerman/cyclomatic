@@ -24,15 +24,21 @@ class Parser {
     //
     
     bool isInsideOfAFunction;
+    bool isInsideOfAComment;
+    bool isInsideOfAString;
+    
+    int scopeDepthLevel;
+    
     bool didfinishParsing;
     bool errors;
+    
     std::vector<std::string> errorMessages;
 public:
     
     /* Constructor */
     
     Parser();
-    Parser(std::string, bool);  //  Takes a fileName, and a flag indicating if parsing should start automatically
+    Parser(const std::string &, bool);  //  Takes a fileName, and a flag indicating if parsing should start automatically
     
     /* Triggers the parsing action. */
     
