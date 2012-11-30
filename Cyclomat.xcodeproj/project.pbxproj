@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		464B156A1668747F004E50E0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 464B15691668747F004E50E0 /* main.c */; };
 		464B156C1668747F004E50E0 /* Cyclomat.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 464B156B1668747F004E50E0 /* Cyclomat.1 */; };
+		464B1574166874D8004E50E0 /* Function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 464B1572166874D8004E50E0 /* Function.cpp */; };
+		464B157B16687AE2004E50E0 /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 464B157916687AE2004E50E0 /* Parser.cpp */; };
+		464B157E16687C20004E50E0 /* Argument.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 464B157C16687C20004E50E0 /* Argument.cpp */; };
+		464B158116688E20004E50E0 /* get_src.c in Sources */ = {isa = PBXBuildFile; fileRef = 464B158016688E20004E50E0 /* get_src.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +32,14 @@
 		464B15651668747F004E50E0 /* Cyclomat */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Cyclomat; sourceTree = BUILT_PRODUCTS_DIR; };
 		464B15691668747F004E50E0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		464B156B1668747F004E50E0 /* Cyclomat.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Cyclomat.1; sourceTree = "<group>"; };
+		464B1572166874D8004E50E0 /* Function.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Function.cpp; sourceTree = "<group>"; };
+		464B1573166874D8004E50E0 /* Function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Function.h; sourceTree = "<group>"; };
+		464B157916687AE2004E50E0 /* Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Parser.cpp; path = Parsers/Parser.cpp; sourceTree = "<group>"; };
+		464B157A16687AE2004E50E0 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Parser.h; path = Parsers/Parser.h; sourceTree = "<group>"; };
+		464B157C16687C20004E50E0 /* Argument.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Argument.cpp; path = Functions/Argument.cpp; sourceTree = "<group>"; };
+		464B157D16687C20004E50E0 /* Argument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Argument.h; path = Functions/Argument.h; sourceTree = "<group>"; };
+		464B158016688E20004E50E0 /* get_src.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = get_src.c; path = get_Src/get_src.c; sourceTree = "<group>"; };
+		464B158216688E69004E50E0 /* get_src.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = get_src.h; path = get_Src/get_src.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +72,42 @@
 		464B15681668747F004E50E0 /* Cyclomat */ = {
 			isa = PBXGroup;
 			children = (
+				464B157F16688E05004E50E0 /* get_src */,
+				464B157816687AD1004E50E0 /* Parsers */,
 				464B15691668747F004E50E0 /* main.c */,
+				464B157516687A3A004E50E0 /* Function Classes */,
 				464B156B1668747F004E50E0 /* Cyclomat.1 */,
 			);
 			path = Cyclomat;
+			sourceTree = "<group>";
+		};
+		464B157516687A3A004E50E0 /* Function Classes */ = {
+			isa = PBXGroup;
+			children = (
+				464B1573166874D8004E50E0 /* Function.h */,
+				464B1572166874D8004E50E0 /* Function.cpp */,
+				464B157C16687C20004E50E0 /* Argument.cpp */,
+				464B157D16687C20004E50E0 /* Argument.h */,
+			);
+			name = "Function Classes";
+			sourceTree = "<group>";
+		};
+		464B157816687AD1004E50E0 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				464B157916687AE2004E50E0 /* Parser.cpp */,
+				464B157A16687AE2004E50E0 /* Parser.h */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		464B157F16688E05004E50E0 /* get_src */ = {
+			isa = PBXGroup;
+			children = (
+				464B158016688E20004E50E0 /* get_src.c */,
+				464B158216688E69004E50E0 /* get_src.h */,
+			);
+			name = get_src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +162,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				464B156A1668747F004E50E0 /* main.c in Sources */,
+				464B1574166874D8004E50E0 /* Function.cpp in Sources */,
+				464B157B16687AE2004E50E0 /* Parser.cpp in Sources */,
+				464B157E16687C20004E50E0 /* Argument.cpp in Sources */,
+				464B158116688E20004E50E0 /* get_src.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
