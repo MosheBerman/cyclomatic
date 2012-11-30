@@ -11,13 +11,26 @@
 
 #include <iostream>
 
+/*
+ 
+ This class allows for the tracking of 
+ functions and their complexity count.
+ 
+ */
+
 class Function {
+private:
     int numberOfDecisions;
     std::string name;
+
 public:
+    
+    /* Constructors */
+    
     Function();                 //  Default Constructor
     Function(std::string);      //  Takes a name for the function
     
+    /* Complexity Count */
     
     void increaseComplexity();
     void decreaseComplexity();

@@ -8,16 +8,12 @@
 
 #include "Function.h"
 
-//
-//  Constructors
-//
+/*  Constructors    */
 
 Function::Function():name("Unnamed Function"), numberOfDecisions(0){ };
 Function::Function(std::string _name):name(_name), numberOfDecisions(0){ };
 
-//
-//  Methods related to complexity
-//
+/*  Complexity Count */
 
 void Function::increaseComplexity(){
     numberOfDecisions++;
