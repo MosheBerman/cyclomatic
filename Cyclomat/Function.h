@@ -10,6 +10,9 @@
 #define __Cyclomat__Function__
 
 #include <iostream>
+#include <vector>
+
+#include "Argument.h"
 
 /*
  
@@ -19,22 +22,30 @@
  */
 
 class Function {
-private:
     int numberOfDecisions;
     std::string name;
-
+    std::vector<Argument> arguments;
 public:
     
     /* Constructors */
     
-    Function();                 //  Default Constructor
-    Function(std::string);      //  Takes a name for the function
+    Function();                                         //  Default Constructor
+    Function(std::string);                              //  Takes a name for the function
+    Function(std::string, std::vector<Argument>);       //  Takes a name for the function, and its arguments
     
     /* Complexity Count */
     
     void increaseComplexity();
     void decreaseComplexity();
     int complexity();
+    
+    /* Arguments */
+    
+    void addArgument(Argument);
+    void removeArgumentNamed(std::string);
+    
+    Argument argumentNamed(std::string);
+    std::vector<Argument> argumentsOfType(std::string);
 };
 
 #endif /* defined(__Cyclomat__Function__) */
