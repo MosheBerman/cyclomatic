@@ -22,16 +22,18 @@
  */
 
 class Function {
-    int numberOfDecisions;
-    std::string name;
     std::vector<Argument> arguments;
+    std::string name;
+    int numberOfDecisions;
+    std::string returnType;
 public:
     
     /* Constructors */
     
-    Function();                                         //  Default Constructor
+    Function();
     Function(std::string);                              //  Takes a name for the function
-    Function(std::string, std::vector<Argument>);       //  Takes a name for the function, and its arguments
+    Function(std::string, std::vector<Argument>);                   //  Takes a name for the function, and its arguments
+    Function(std::string, std::vector<Argument>, std::string);       //  Takes a name for the function, arguments, and a return type
     
     /* Complexity Count */
     

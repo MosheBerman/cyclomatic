@@ -17,13 +17,23 @@ Function::Function():name("Unnamed Function"), numberOfDecisions(0){
 Function::Function(std::string _name){
     name = _name;
     numberOfDecisions = 0;
+    returnType = "void";
 }
 
 Function::Function(std::string _name, std::vector<Argument> _arguments){
     name = _name;
     numberOfDecisions = 0;
     arguments = _arguments;
+    returnType = "void";
 }
+
+Function::Function(std::string _name, std::vector<Argument> _arguments, std::string _returnType){
+    name = _name;
+    numberOfDecisions = 0;
+    arguments = _arguments;
+    returnType = _returnType;
+}
+
 
 /*  Complexity Count */
 
